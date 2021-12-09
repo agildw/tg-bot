@@ -19,14 +19,4 @@ module.exports = function tiktok(url) {
                 reject(error)
             })
     })
-    // axios(config)
-    //     .then((response) => {
-    //         // console.log(response.data.aweme_details[0].video.bit_rate[0].play_addr.url_list[2])
-    //         let downloadLink = response.data.aweme_details[0].video.bit_rate[0].play_addr.url_list[2]
-    //         console.log(downloadLink)
-    //         return downloadLink
-    //     })
-    //     .catch((error) => {
-    //         // console.log(error.message)
-    //     })
 }

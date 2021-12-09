@@ -3,7 +3,7 @@ const fs = require('fs');
 require('dotenv').config();
 const tiktok = require('./tiktok');
 
-
+//your bot token
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 bot.start((ctx) => {
@@ -16,11 +16,7 @@ bot.command('/tiktok', (ctx) => {
 
     tiktok(tiktokUrl)
         .then((response) => {
-            // console.log(response.data.aweme_details[0].video.bit_rate[0].play_addr.url_list[2])
-            // console.log(response.request.res.responseUrl)
-
             ctx.replyWithVideo(response.data.aweme_details[0].video.bit_rate[0].play_addr.url_list[2])
-
         })
         .catch((error) => {
             console.log(error)
